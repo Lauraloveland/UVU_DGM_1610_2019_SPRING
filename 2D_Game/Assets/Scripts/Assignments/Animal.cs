@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour{
    public  int health;
-   public string type;
+   public int legs;
         
     
 }
