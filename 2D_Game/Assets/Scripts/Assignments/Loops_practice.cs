@@ -12,8 +12,12 @@ public class Loops_practice : MonoBehaviour
     void Start()
     {
         for(int i = 0; i <numEnemies; i++)
+        {
+            Debug.Log("Creating enemy number: " + i);
+        }
     }
-            Debug.log("Creating enemy number: " + i);
+    
+    
     // Update is called once per frame
     void Update()
     {
