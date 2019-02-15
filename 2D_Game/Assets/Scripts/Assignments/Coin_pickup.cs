@@ -8,7 +8,7 @@ public class Coin_pickup : Pickup {
 
 
      void OnTriggerEnter2D(Collider2D other){
-         if (GameObject.other.name == "Yoh")
+         if (GameObject.other.name == "PC")
          //player Collects coin
 
      }
