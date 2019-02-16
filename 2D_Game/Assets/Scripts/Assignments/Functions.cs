@@ -8,17 +8,23 @@ public class Functions : MonoBehaviour{
     // Start is called before the first frame update
     void Start()
     {
-        weather(weather);
+        Weather(weather);
     
 
     }
-          void weather(string weatherState){
+    void Weather(string weatherState)
+    {
+        if(weatherState == "Sunny")
+        {
+            print("The sun is shining today!");
+        }
+        else if (weatherState == "Raining")
+        {
 
-          }
-          if(weatherState == "Sunny"){
-          print("The sun is shining today!");
-          }
-          else if (weatherState == "Raining")
+        }
+
+    }
+        
 
     // Update is called once per frame
     void Update()
