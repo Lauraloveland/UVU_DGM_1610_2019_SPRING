@@ -6,6 +6,7 @@ public class Canine : Animal{
 
     public bool domesticated;
     public bool curlyTail;
+    public bool wrinkles;
     public bool pointedEars;
     public bool shortHair;
     public float size;
