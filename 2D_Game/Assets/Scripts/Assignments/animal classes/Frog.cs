@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Frog : MonoBehaviour
+public class Frog : Amphibian
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public bool green;
+public bool size;
+public bool eyeColor;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
