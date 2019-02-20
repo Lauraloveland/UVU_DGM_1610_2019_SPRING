@@ -8,7 +8,7 @@ public bool green;
 public bool size;
 public bool eyeColor;
 public bool weight;
-public int 
+public int age;
 
 
 }
