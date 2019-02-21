@@ -14,13 +14,11 @@ private bool grounded;
     // Start is called before the first frame update
     void Start()
     {
-     
         
     }
 
     // Update is called once per frame
-    void Update(){
-        //moves player left and right
+    void Update()
     {
         if (Input.GetKey(KeyCode.D))
         {
@@ -31,7 +29,7 @@ private bool grounded;
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, 0);
         }
-//makes player jump
+
         if (Input.GetKey(KeyCode.Space))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, moveSpeed);
