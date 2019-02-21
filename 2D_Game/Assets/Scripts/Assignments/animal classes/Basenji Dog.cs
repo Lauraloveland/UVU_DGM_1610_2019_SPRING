@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasenjiDog : Canine
 {
-    public bool curlyTail;
+    public bool age;
     // Start is called before the first frame update
     void Start()
     {print ("Bark");
