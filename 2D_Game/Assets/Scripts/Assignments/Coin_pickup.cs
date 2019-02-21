@@ -15,20 +15,4 @@ public class Coin_pickup : Pickup {
              //player Collects coin
          }
 
-       else
-       {
-           //Not player
-       }
      }
-    // Start is called before the first frame update
-    void Start()
-    {
-        //inside of the container
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
