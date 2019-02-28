@@ -6,7 +6,7 @@ public class Variables : MonoBehaviour {
   
      public int number;
      public float speed;
-     public string name;
+     public string character;
      
     // Start is called before the first frame update
     void Start(){
