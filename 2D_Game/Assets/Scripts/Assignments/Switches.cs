@@ -54,8 +54,18 @@ void MurderMystery (string person){
          
             break;
 
-          }
+            case "character A":
 
-         
+            print("yeet me from this mortal coil");
+
+            break; 
+
+            case "Character B":
+
+            print("h");
+
+            break;
+             }
+          }    
           
-      }
+       }
