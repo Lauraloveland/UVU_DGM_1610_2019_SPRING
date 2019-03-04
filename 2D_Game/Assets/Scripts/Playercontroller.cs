@@ -10,13 +10,19 @@ public float jumpHeight;
 
 //Player grounded Variables
 private bool grounded;
+public Transform groundCheck;
+public float groundCheckRadius;
+public LayerMask whatIsGround;
 
     // Start is called before the first frame update
     void Start()
     {
         
     }
+void FixedUpdate(){
+    grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
+}
     // Update is called once per frame
     void Update()
     {
@@ -36,8 +42,15 @@ private bool grounded;
         }
 
 
+
+        // player jump
+        if(Input.GetKeyDown(KeyCode.w)&& grounded){
+
+        }
     }
            
-        
+        void Jump(){
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x.jumpHeight);
+        }
     
 }
