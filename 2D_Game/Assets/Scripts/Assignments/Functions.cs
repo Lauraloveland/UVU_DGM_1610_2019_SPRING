@@ -8,7 +8,13 @@ public class Functions : MonoBehaviour{
     // Start is called before the first frame update
     void Start()
     {
-        Weather(weather);
+    //   print(Sum(36,24));
+
+
+    //   print(Multi(20,5));
+
+
+    //    Weather(weather);
     
 
     }
@@ -31,4 +37,17 @@ public class Functions : MonoBehaviour{
     {
         
     }
-}
+
+//     int Sum(int a, int b,){
+//         return a + b 
+
+//     }
+
+//     int Multi(int c, int d){
+//         return c * d; 
+//     }
+
+
+// }
+
+

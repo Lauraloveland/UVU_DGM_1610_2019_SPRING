@@ -13,12 +13,15 @@ public bool isUtahn = true;
     }
 
     // Update is called once per frame
+
+                    
     void Update(){
+
      if(stopLight== "Red" && isUtahn){
          print("stop! The light is red!");
      }
-else if(stopLight== "Yellow"){
-    if(isUtahn){
+else if(stopLight== "Yellow"){ 
+    if(isUtahn)
         print("hurry!!!");
     }
 
