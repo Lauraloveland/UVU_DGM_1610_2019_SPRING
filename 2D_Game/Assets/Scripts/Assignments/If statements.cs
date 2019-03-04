@@ -17,14 +17,9 @@ public bool isUtahn = true;
      if(stopLight== "Red" && isUtahn){
          print("stop! The light is red!");
      }
-else if(stopLight== "Yellow"&& isUtahn){
-    print("Punch it!");
-     }
-      else(stopLight== "Green" && isUtahn){
-          print("check your phone");
-      }
+else if(stopLight== "Yellow"){
+    if(isUtahn){
+        print("hurry!!!");
+    }
 
-      
-          print("Check Phone");
-      }
-   }
+}
