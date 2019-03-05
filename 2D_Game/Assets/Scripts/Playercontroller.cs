@@ -50,7 +50,7 @@ void FixedUpdate(){
     }
            
         void Jump(){
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x.jumpHeight);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
         }
     
 }
