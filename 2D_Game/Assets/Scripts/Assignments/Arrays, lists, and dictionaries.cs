@@ -33,7 +33,10 @@ public ArrayList inventory = new ArrayList();
         SantasList.Add("Ty");
         SantasList.Add("Susie");
         SantasList.Remove("Jimmy");
+        SantasList.Remove ("Jojo");
 
+
+        
         print(clientList[2]);
         print(SantasList[3]);
 
