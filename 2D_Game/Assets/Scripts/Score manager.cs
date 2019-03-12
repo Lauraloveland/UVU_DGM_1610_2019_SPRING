@@ -1,15 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class Scoremanager : MonoBehaviour
 {
     public static int score;
-    Text ScoreText;
+    private Text ScoreText;
 
     // Start is called before the first frame update
     void Start()
     {
+      
+    //Gets UI text component
         ScoreText = GetComponent<Text>();
         score = 0;
         
@@ -23,4 +24,10 @@ public class Scoremanager : MonoBehaviour
 
         ScoreText.text = " " + score;
     }
-}
+    public static void AddPoints (int pointsToAdd);{
+
+    
+        score + = pointsToAdd;
+
+    }
+

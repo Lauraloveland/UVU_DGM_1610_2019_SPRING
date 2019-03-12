@@ -9,6 +9,13 @@ public int coinValue;
 void OnTriggerEnter2D(Collider2D other){
     if (other.name == "player"){
             print ("You've Collected The Coin!");
+
+
+
+        Scoremanager.AddPoints(coinValue);
+
+
+
             Destroy(gameObject);
         }
 
