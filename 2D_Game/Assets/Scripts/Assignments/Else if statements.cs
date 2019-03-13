@@ -28,7 +28,7 @@ public bool boiled;
           }
 
         else if (noodles == "plain" && spicy == false){
-            print ("okay, still gross");
+            print ("okay, still gross");}
 
         }
     }
