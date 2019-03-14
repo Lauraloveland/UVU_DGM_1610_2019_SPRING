@@ -24,10 +24,10 @@ public class Scoremanager : MonoBehaviour
 
         ScoreText.text = " " + score;
     }
-    public static void AddPoints (int pointsToAdd);{
+    public static void AddPoints(int pointsToAdd);{
 
     
-        score + = pointsToAdd;
+        score +  pointsToAdd;
 
     }
 
