@@ -43,5 +43,6 @@
 
 
 
-// This script was heavily refeerenced from an online unity forum
+// This script was heavily refeerenced from a youtube video that can be found here:
+// https://www.youtube.com/watch?v=AfwmRYQRsbg
 // I also received help from my older brother who is a CS major, hope this is okay
