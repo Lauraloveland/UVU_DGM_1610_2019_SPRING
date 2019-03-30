@@ -1,39 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
 
-public class Elseifstatements : MonoBehaviour{
+// public class Elseifstatements : MonoBehaviour{
 
-public string noodles;
-public bool spicy = true;
-public string sauce;
-public string beef;
-public string broth;
-public bool boiled;
+// public string noodles;
+// public bool spicy = true;
+// public string sauce;
+// public string beef;
+// public string broth;
+// public bool boiled;
 
-    void Start()
-    {
+//     // void Start()
+//     // {
       
-        if (noodles == "tender"){
-            if (spicy){
-                print ("The noodles are now done");
-        }
+//     //     if (noodles == "tender"){
+//     //         if (spicy){
+//     //             print ("The noodles are now done");
+//     //     }
 
-          else if (noodles == "soggy" && boiled == true){
+//     //       else if (noodles == "soggy" && boiled == true){
               
-          }
+//     //       }
 
-          print("This is sludge!");{
+//     //       print("This is sludge!");{
 
-          }
+//     //       }
 
-        if (noodles == "plain" && spicy == false){
-            print ("okay, still gross");{
+//     //     if (noodles == "plain" && spicy == false){
+//     //         print ("okay, still gross");{
                 
-            }
+//     //         }
 
-        }
-    }
+//     //     }
+//     // }
 
 
     
