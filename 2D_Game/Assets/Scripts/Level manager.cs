@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
         PCRigid = GameObject.Find("PC").GetComponent<Rigidbody2D>();
      player = GameObject.Find("Player");
     }
-         puclic void  RespawnPlayer(){
+         puclic void RespawnPlayer(){
            StartCoroutine ("RespawnPlayerCo");
          }
          public IEnumerator RespawnPlayerCo(){
@@ -42,7 +42,7 @@ public class LevelManager : MonoBehaviour
 
              PCRigid.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
-             Scoremanager.AddPoints(-PointPenaltyOnDeath);
+             ScoreManager.AddPoints(-PointPenaltyOnDeath);
 
              Debug.Log("PC Respawn");
 
