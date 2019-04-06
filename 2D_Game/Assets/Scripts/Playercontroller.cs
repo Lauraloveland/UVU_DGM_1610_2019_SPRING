@@ -44,7 +44,8 @@ void FixedUpdate(){
 
 
         // player jump
-        if(Input.GetKeyDown(KeyCode.w)&& grounded){
+        if(Input.GetKeyDown(KeyCode.W)&& grounded){
+            
 
         }
     }
