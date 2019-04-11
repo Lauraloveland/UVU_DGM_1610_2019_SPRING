@@ -24,8 +24,17 @@
 //                    else 
 //                    {
 //                        mCurrentValue = health;
+//                        mCurrentPercent = (float) mCurrentValue / (float)(Max - Min);
+
 //                    }
+//                    TextHealth.text = string.Format("{0}%", Mathf.RoundToInt(mCurrentPercent * 100));
+//                    ImgHealthBar.fillAmount = mCurrentPercent;
+                   
 //                }
+//             }
+//             public float CurrentPercent 
+//             {
+
 //             }
 //         }
 //     }
