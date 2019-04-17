@@ -7,12 +7,17 @@ public class Playercontroller : MonoBehaviour
 //player movement variables
 { public float moveSpeed;
 public float jumpHeight;
+private bool doubleJump;
 
 //Player grounded Variables
 private bool grounded;
 public Transform groundCheck;
 public float groundCheckRadius;
 public LayerMask whatIsGround;
+
+
+// Non slide player
+private float moveVelocity;
 public Animator Animator;
 
     // Start is called before the first frame update
@@ -52,8 +57,13 @@ void FixedUpdate(){
         }
 
        if(grounded){
-            // doubleJump = false;
-            // Animator.SetBool("isJumping", false);
+             doubleJump = false;
+             Animator.SetBool("isJumping", false);
+       }
+       {
+           if (Input.GetKeyDown (KeyCode.Space)&& !doubleJump && !grounded){
+
+       }
        }
 
         // player jump
@@ -62,6 +72,7 @@ void FixedUpdate(){
             
 
         }
+       moveVelocity = 0f;
     }
            
         public void Jump(){
