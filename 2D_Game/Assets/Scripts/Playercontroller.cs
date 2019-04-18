@@ -34,7 +34,8 @@ void FixedUpdate(){
     {
         if (Input.GetKey(KeyCode.D))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, 0);
+            // GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, 0);
+            moveVelocity = moveSpeed;
             Animator.SetBool("isWalking", true);
         }
         else if (Input.GetKeyUp(KeyCode.D)){
@@ -44,7 +45,9 @@ void FixedUpdate(){
 
         if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, 0);
+            // GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, 0);
+            moveVelocity = - moveSpeed;
+            
             Animator.SetBool("isWalking", true);
         }
         else if (Input.GetKeyUp (KeyCode.A)){
@@ -69,6 +72,7 @@ void FixedUpdate(){
         // player jump
         if(Input.GetKeyDown(KeyCode.W)&& grounded){
             Jump ();
+            doubleJump = true;
             
 
         }
