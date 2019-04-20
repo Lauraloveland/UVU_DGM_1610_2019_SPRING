@@ -23,7 +23,7 @@ public Animator Animator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Animator = GetComponent<Animator>();
     }
 void FixedUpdate(){
     grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
@@ -78,7 +78,7 @@ void FixedUpdate(){
         }
        moveVelocity = 0f;
     }
-           
+          
         public void Jump(){
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
             Animator.SetBool("isJumping", true);
