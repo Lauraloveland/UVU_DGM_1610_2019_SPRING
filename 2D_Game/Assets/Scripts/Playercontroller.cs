@@ -54,33 +54,31 @@ void FixedUpdate(){
             Animator.SetBool("isWalking", false);
         }
 
-         if (Input.GetKey(KeyCode.Space))
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, moveSpeed);
-        }
+		if(Input.GetKeyDown (KeyCode.Space) && grounded){
+			Jump();		
+            doubleJump = false;
+            print("Jumping once");
+		}
 
-       if(grounded){
-             doubleJump = false;
-             Animator.SetBool("isJumping", false);
-       }
-       {
-           if (Input.GetKeyDown (KeyCode.Space)&& !doubleJump && !grounded){
+		// Double jump code
+		if(grounded){
+			doubleJump = false;	
+			Animator.SetBool("isJumping", false);
+		}			
+			
 
-       }
-       }
+		if(Input.GetKeyDown (KeyCode.Space) && !doubleJump && !grounded){
+			Jump();
+			doubleJump = true;		
+            print("Jumping twice");	
+		}
 
-        // player jump
-        if(Input.GetKeyDown(KeyCode.W)&& grounded){
-            Jump ();
-            doubleJump = true;
-            
-
-        }
-       moveVelocity = 0f;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+        moveVelocity = 0f;
     }
           
         public void Jump(){
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
             Animator.SetBool("isJumping", true);
         }
     
