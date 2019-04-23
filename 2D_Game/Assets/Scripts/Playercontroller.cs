@@ -66,7 +66,6 @@ void FixedUpdate(){
 			Animator.SetBool("isJumping", false);
 		}			
 			
-
 		if(Input.GetKeyDown (KeyCode.Space) && !doubleJump && !grounded){
 			Jump();
 			doubleJump = true;		

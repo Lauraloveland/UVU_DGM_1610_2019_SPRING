@@ -7,7 +7,7 @@ public class coinpickup : MonoBehaviour
 
 public int coinValue;
 void OnTriggerEnter2D(Collider2D other){
-    if (other.name == "player"){
+    if (other.name == "character"){
             print ("You've Collected The Coin!");
 
 
