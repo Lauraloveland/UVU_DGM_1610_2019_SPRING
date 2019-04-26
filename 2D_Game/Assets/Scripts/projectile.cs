@@ -1,49 +1,58 @@
-﻿// using System.Collections;
-// using UnityEngine;
-// public class projectile : MonoBehaviour {
-//     public float speed;
-//     public float timeOut;
-//     public GameObject player;
-//     public GameObject enemyDeath;
-//     public GameObject projectileParticle;
-//     public int pointsForKill;
+﻿using UnityEngine;
+using System.Collections;
 
-// }
+public class Projectile : MonoBehaviour {
 
-// void Start(){
+	public float speed;
 
-//     player = GameObject.Find("Player");
+	public float timeOut;
 
-//     enemyDeath = Resources.Load("Prefabs/Death_PS") as GameObject;
+	public GameObject player;
 
-// projectileParticle = Resources.Load("Prefabs/Respawn_PS") as GameObject;
-// if(PC.Transform.localScale.x < 0)
-// Speed = - Speed;
+	public GameObject enemyDeath;
 
-// Destroy(GameObject,timeOut);
+	public GameObject projectileParticle;
 
+	public int pointsForKill;
 
-// }
+	// Use this for initialization
+	void Start () {
+		 player = GameObject.Find("CHARACTER");
 
-// void Update (){
-//     GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>()velocity.y);
-// }
-// void OnTriggerenter2D(Collider2D other ){
-    
-//     if(other.tag == "Enemy"){
-//         Instantiate(enemyDeath. other.Transform.position, other.transform.rotation);
-//         Destroy (other.gameObject);
-//         Scoremanager.AddPoints (pointsForKill);
+		if(player.transform.localScale.x < 0)
+			speed = -speed;			
 
-//     }
-//     Destroy(GameObject);
-// }
-// void OnCollisionEnter2D(Collision2D other)
-// {
-    
-//         Instantaite(projectileParticle, Transform.position, Transform.rotation);
-//         Destroy (GameObject);
+		// Destroys Projectile after X seconds
+		Destroy(gameObject,timeOut);
+						
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
+	}
 
-//     }
-// }
+	void OnTriggerEnter2D(Collider2D other){
+		//Destroys enemey on contact with projectile. Adds points. 
+		if(other.tag == "Enemy"){
+			print("Entering Trigger!"+ other.gameObject);
+			Instantiate(enemyDeath, other.transform.position, other.transform.rotation);
+			Destroy (other.gameObject);
+			ScoreManager.AddPoints (pointsForKill);
+		}
+		
+		
+		// Instantiate(ProjectileParticle, transform.position, transform.rotation);
 
+		//Destroy projectile after hitting the enemy.
+		Destroy (gameObject);
+	}
+	//OnCollision with object in the environment
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		print("Hitting Collider!"+ other.gameObject);
+		Instantiate(projectileParticle, transform.position, transform.rotation);
+		Destroy (gameObject);
+		
+	}
+}
