@@ -20,14 +20,14 @@
      private float gravityStore;
 
     void Start (){
-         PCRigid = GameObject.Find("PC").GetComponent<Rigidbody2D>();
-      player = GameObject.Find("Player");
+         PCRigid = GameObject.Find("CHARACTER").GetComponent<Rigidbody2D>();
+      player = GameObject.Find("CHARACTER");
      }
          public void RespawnPlayer(){
             StartCoroutine ("RespawnPlayerCo");
           }
           public IEnumerator RespawnPlayerCo(){
-              Instantiate (deathParticle, PCRigid.transform.position, PCRigid.transform.rotation);
+              Instantiate (deathParticle, PCRigid.transform.position, deathParticle.transform.rotation);
 
               player.SetActive(false);
 
@@ -39,7 +39,7 @@
 
              PCRigid.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
-              Scoremanager.AddPoints(-PointPenaltyOnDeath);
+              ScoreManager.AddPoints(-PointPenaltyOnDeath);
 
               Debug.Log("PC Respawn");
 
@@ -52,7 +52,7 @@
               player.SetActive(true);
               PCRigid.GetComponent<Renderer> ().enabled= true;
 
-             Instantiate (respawnParticle, currentCheckPoint.transform.position,currentCheckPoint.transform.rotation);
+             Instantiate (respawnParticle, currentCheckPoint.transform.position, deathParticle.transform.rotation);
 
 
           }

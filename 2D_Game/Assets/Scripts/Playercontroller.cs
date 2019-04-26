@@ -57,7 +57,6 @@ void FixedUpdate(){
 		if(Input.GetKeyDown (KeyCode.Space) && grounded){
 			Jump();		
             doubleJump = false;
-            print("Jumping once");
 		}
 
 		// Double jump code
@@ -68,8 +67,7 @@ void FixedUpdate(){
 			
 		if(Input.GetKeyDown (KeyCode.Space) && !doubleJump && !grounded){
 			Jump();
-			doubleJump = true;		
-            print("Jumping twice");	
+			doubleJump = true;
 		}
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);

@@ -6,16 +6,12 @@ public class PlayerShoot : MonoBehaviour{
 public Transform firePoint;
 public GameObject projectile;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        projectile = Resources.Load("Prefabs/projectile") as GameObject;
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.RightControl))
-        Instantiate(projectile,firePoint.position, firePoint.rotation);
+        {
+            Instantiate(projectile, firePoint.position, firePoint.rotation);
+            print("shooting");
+        }
     }
 }
