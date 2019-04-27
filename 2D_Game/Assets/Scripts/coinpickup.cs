@@ -7,12 +7,12 @@ public class coinpickup : MonoBehaviour
 
 public int coinValue;
 void OnTriggerEnter2D(Collider2D other){
-    if (other.name == "character"){
+    if (other.tag == "Player"){
             print ("You've Collected The Coin!");
 
 
 
-        Scoremanager.AddPoints(coinValue);
+        ScoreManager.AddPoints(coinValue);
 
 
 
